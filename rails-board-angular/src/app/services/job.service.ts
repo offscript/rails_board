@@ -18,17 +18,16 @@ export class JobService {
  		return this.http.get(this.jobsUrl)
                     .map(this.extractData)
                     .catch((error:any) =>  Observable.throw(error.json().error || 'Server error'));
-		//get request
-		/** return this.http.get(this.jobsUrl)
-		// unpackage the jobs 
-		.map((res:Response) => res.json())
-		//errors
-		.catch((error:any) =>  Observable.throw(error.json().error || 'Server error')); **/
 	}
-//
-//	createJob(title: string, description: string, location: string) : Observable<Job[]> {
-//		return 
-//	}
+
+/*	addJob(body: Object) : Observable<Job[]> {
+		let json_body = JSON.stringify(body);
+		let headers = new Headers({ 'Content-Type': 'application/json' });
+    	let options = new RequestOptions({ headers: headers });
+		return this.http.post(this.jobsUrl, json_body, options) //post request
+						.map(this.extractData)
+						.catch((error:any) =>  Observable.throw(error.json().error || 'Server error'));
+	} */
 
 	private extractData(res: Response) {
 		let body = res.json();

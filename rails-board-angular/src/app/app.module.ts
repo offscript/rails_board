@@ -17,6 +17,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from "./guards/auth.guard";
 import { JobComponent } from "./job/job.component";
 import { JobService } from "./services/job.service";
+import { JobFormComponent } from './job-form/job-form.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { JobService } from "./services/job.service";
     LoginFormComponent,
     RegisterFormComponent,
     ProfileComponent,
-    JobComponent
+    JobComponent,
+    JobFormComponent
   ],
   imports: [
     BrowserModule,

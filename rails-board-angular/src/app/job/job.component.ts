@@ -33,8 +33,4 @@ export class JobComponent implements OnInit {
 
 	}
 
-	addJob(title: string, description: string, location: string) {
-		
-	}
-
 }
