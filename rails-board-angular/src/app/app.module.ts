@@ -15,6 +15,8 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 import { AuthService } from "./services/auth.service";
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from "./guards/auth.guard";
+import { JobComponent } from "./job/job.component";
+import { JobService } from "./services/job.service";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { AuthGuard } from "./guards/auth.guard";
     AuthDialogComponent,
     LoginFormComponent,
     RegisterFormComponent,
-    ProfileComponent
+    ProfileComponent,
+    JobComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { AuthGuard } from "./guards/auth.guard";
     AppRoutingModule,
     MaterializeModule
   ],
-  providers: [ Angular2TokenService, AuthService, AuthGuard ],
+  providers: [ Angular2TokenService, AuthService, AuthGuard, JobService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,3 +8,4 @@
 
 
 User.create(email: 'user@example.com', nickname: 'UOne', name: 'User One', password: "monkey67")
+Post.create(title: 'Software Developer', location: 'New York City, New York', description: 'Looking for a Software developer...')

@@ -10,7 +10,7 @@ import { environment } from "../environments/environment";
 
 export class AppComponent {
   title = 'app works!';
-  constructor(private authToken: Angular2TokenService){
+ constructor(private authToken: Angular2TokenService){
     
     this.authToken.init(environment.token_auth_config);
 
@@ -27,5 +27,5 @@ export class AppComponent {
           console.error('auth error:', err);
         }
     )
-  } 
+  }
 }
