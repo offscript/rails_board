@@ -20,14 +20,15 @@ export class JobService {
                     .catch((error:any) =>  Observable.throw(error.json().error || 'Server error'));
 	}
 
-/*	addJob(body: Object) : Observable<Job[]> {
-		let json_body = JSON.stringify(body);
+	addJob(body: Object) : Observable<Job> {
+		let json_body = JSON.stringify({"posts": body});
+		console.log(json_body);
 		let headers = new Headers({ 'Content-Type': 'application/json' });
     	let options = new RequestOptions({ headers: headers });
 		return this.http.post(this.jobsUrl, json_body, options) //post request
-						.map(this.extractData)
+						.map((res:Response) => res.json())
 						.catch((error:any) =>  Observable.throw(error.json().error || 'Server error'));
-	} */
+	}
 
 	private extractData(res: Response) {
 		let body = res.json();

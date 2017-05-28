@@ -8,9 +8,12 @@ class PostsController < ApplicationController
 	end
 
 	def create
+		puts("I got it, at least")
 		@post = Post.new(post_params)
-		if @post.save
-			render json: { status: 'SUCCESS', message: 'Loaded all posts'}, status: :ok
+		if @post.save	
+			render json: { status: 'SUCCESS', message: 'Loaded posting'}, status: :ok
+		else 
+			render json: { status: '500', message: 'Post did not save'}, status: 500
 		end
 	end
 
