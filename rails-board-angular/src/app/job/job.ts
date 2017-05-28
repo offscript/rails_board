@@ -1,7 +1,5 @@
 export class Job {
-	constructor(
-		public title: string,
-		public description: string,
-		public location: string
-		){}
+	title: string;
+	description: string;
+	location: string;
 }
