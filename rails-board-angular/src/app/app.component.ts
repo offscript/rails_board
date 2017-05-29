@@ -10,9 +10,9 @@ import { environment } from "../environments/environment";
 
 export class AppComponent {
   title = 'app works!';
- constructor(private authToken: Angular2TokenService){
+ constructor(public authToken: Angular2TokenService){
     
-    this.authToken.init(environment.token_auth_config);
+    this.authToken.init();
 
     this.authToken.signIn({email: "user@example.com", password: "monkey67"}).subscribe(
 

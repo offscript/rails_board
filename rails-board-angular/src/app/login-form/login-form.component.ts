@@ -16,7 +16,7 @@ export class LoginFormComponent implements OnInit {
 
   	@Output() onFormResult = new EventEmitter<any>();
 
-  	constructor(private authService: AuthService) {}
+  	constructor(public authService: AuthService) {}
 
   	ngOnInit() {}
 

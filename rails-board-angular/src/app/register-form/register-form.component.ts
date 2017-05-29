@@ -16,7 +16,7 @@ export class RegisterFormComponent implements OnInit {
 
   @Output() onFormResult = new EventEmitter<any>();
 
-  constructor(private tokenAuthSerivce:Angular2TokenService) { }
+  constructor(public tokenAuthSerivce:Angular2TokenService) { }
 
   ngOnInit() {}
 
